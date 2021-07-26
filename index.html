@@ -10,12 +10,57 @@
 </head>
 
 <body>
+    <div class="budget-container">
+        <div class="app-title">Title</div>
+        <div class="budget-header">
+            <div class="balance">
+                <div class="title">Balance </div>
+                <div class="value"></div>
+            </div>
 
+            <div class="account">
+                <div class="income">
+                    <div class="title">Income</div>
+                    <div class="income-total"></div>
+                </div>
+                <div class="chart"></div>
+                <div class="outcome">
+                    <div class="title">Outcome</div>
+                    <div class="outcome-total"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="budget-dashboard">
+            <div class="dash-title">Dashboard</div>
+            <div class="toggle">
+                <div class="tab1">Expenses</div>
+                <div class="tab2 active">Income</div>
+                <div class="tab3">All</div>
+            </div>
+            <div class="hid" id="expense"></div>
+            <div id="income">
+
+
+                <div class="input">
+                    <input type="text" name="title" placeholder="Title">
+                    <input type="number" id="income-amount-input" placeholder="$0">
+                    <div class="add-income"></div>
+                </div>
+
+            </div>
+            <div class="hide" id="all"></div>
+        </div>
+
+
+
+
+    </div>
 
 
 
     <script src="chart.js"></script>
-    <script src="budget.js"></script>
+    <script></script>
 </body>
 
 </html>
