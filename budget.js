@@ -1,3 +1,4 @@
+// vars
 const incomeTotalE1 = document.querySelector(".outcome-total");
 
 const expenseBtn = document.querySelector(".tab1");
@@ -23,3 +24,48 @@ const allE1 = document.querySelector("#all");
 const addIncome = document.querySelector(".add-income");
 const incomeTitle = document.getElementById("income-title-input");
 const incomeAmount = document.getElementById("income-amount-input");
+
+
+// event listeners
+expenseBtn.addEventListener('click', function(){
+    active(expenseBtn);
+    inactive([incomeBtn, allBtn]);
+    show(expenseE1);
+    hide([incomeE1, allE1]);
+});
+
+incomeBtn.addEventListener('click', function(){
+    active(incomeBtn);
+    inactive([expenseBtn, allBtn]);
+    show(incomeE1);
+    hide([expenseE1, allE1]);
+});
+
+allBtn.addEventListener('click', function(){
+    active(allBtn);
+    inactive([expenseBtn, incomeBtn]);
+    show(allE1);
+    hide([expenseE1, incomeE1]);
+});
+
+
+// update UI functions
+function active(element){
+    element.classlist.add("active");
+}
+
+function show(element){
+    element.classlist.remove("hide");
+}
+
+function hide(elementsArray){
+    elementsArray.forEach(element => {
+        element.classlist.add('hide');
+    });
+}
+
+function inactive(elementsArray){
+    elementsArray.forEach(element => {
+        element.classlist.remove("active");
+    })
+}
