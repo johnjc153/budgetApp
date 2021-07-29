@@ -27,21 +27,21 @@ const incomeAmount = document.getElementById("income-amount-input");
 
 
 // event listeners
-expenseBtn.addEventListener('click', function(){
+expenseBtn.addEventListener('click', function () {
     active(expenseBtn);
     inactive([incomeBtn, allBtn]);
     show(expenseE1);
     hide([incomeE1, allE1]);
 });
 
-incomeBtn.addEventListener('click', function(){
+incomeBtn.addEventListener('click', function () {
     active(incomeBtn);
     inactive([expenseBtn, allBtn]);
     show(incomeE1);
     hide([expenseE1, allE1]);
 });
 
-allBtn.addEventListener('click', function(){
+allBtn.addEventListener('click', function () {
     active(allBtn);
     inactive([expenseBtn, incomeBtn]);
     show(allE1);
@@ -50,22 +50,26 @@ allBtn.addEventListener('click', function(){
 
 
 // update UI functions
-function active(element){
+function active(element) {
     element.classlist.add("active");
+    console.log('active');
 }
 
-function show(element){
+function show(element) {
     element.classlist.remove("hide");
+    console.log('show');
 }
 
-function hide(elementsArray){
+function hide(elementsArray) {
     elementsArray.forEach(element => {
         element.classlist.add('hide');
     });
+    console.log('hide');
 }
 
-function inactive(elementsArray){
+function inactive(elementsArray) {
     elementsArray.forEach(element => {
         element.classlist.remove("active");
-    })
+    });
+    console.log('inactive');
 }
