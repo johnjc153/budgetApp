@@ -25,6 +25,11 @@ const addIncome = document.querySelector(".add-income");
 const incomeTitle = document.getElementById("income-title-input");
 const incomeAmount = document.getElementById("income-amount-input");
 
+let ENTRY_LIST = [];
+
+
+
+add.addEventListener("click")
 
 // event listeners
 expenseBtn.addEventListener('click', function () {
